@@ -1,0 +1,12 @@
+/Users/joannachen/Documents/aa-cd/c-sharp-notes/projects/branches-tutorial/bin/Debug/netcoreapp3.1/BranchesAndLoops.deps.json
+/Users/joannachen/Documents/aa-cd/c-sharp-notes/projects/branches-tutorial/bin/Debug/netcoreapp3.1/BranchesAndLoops.runtimeconfig.json
+/Users/joannachen/Documents/aa-cd/c-sharp-notes/projects/branches-tutorial/bin/Debug/netcoreapp3.1/BranchesAndLoops.runtimeconfig.dev.json
+/Users/joannachen/Documents/aa-cd/c-sharp-notes/projects/branches-tutorial/bin/Debug/netcoreapp3.1/BranchesAndLoops.dll
+/Users/joannachen/Documents/aa-cd/c-sharp-notes/projects/branches-tutorial/bin/Debug/netcoreapp3.1/BranchesAndLoops.pdb
+/Users/joannachen/Documents/aa-cd/c-sharp-notes/projects/branches-tutorial/obj/Debug/netcoreapp3.1/BranchesAndLoops.csprojAssemblyReference.cache
+/Users/joannachen/Documents/aa-cd/c-sharp-notes/projects/branches-tutorial/obj/Debug/netcoreapp3.1/BranchesAndLoops.AssemblyInfoInputs.cache
+/Users/joannachen/Documents/aa-cd/c-sharp-notes/projects/branches-tutorial/obj/Debug/netcoreapp3.1/BranchesAndLoops.AssemblyInfo.cs
+/Users/joannachen/Documents/aa-cd/c-sharp-notes/projects/branches-tutorial/obj/Debug/netcoreapp3.1/BranchesAndLoops.csproj.CoreCompileInputs.cache
+/Users/joannachen/Documents/aa-cd/c-sharp-notes/projects/branches-tutorial/obj/Debug/netcoreapp3.1/BranchesAndLoops.dll
+/Users/joannachen/Documents/aa-cd/c-sharp-notes/projects/branches-tutorial/obj/Debug/netcoreapp3.1/BranchesAndLoops.pdb
+/Users/joannachen/Documents/aa-cd/c-sharp-notes/projects/branches-tutorial/obj/Debug/netcoreapp3.1/BranchesAndLoops.genruntimeconfig.cache
