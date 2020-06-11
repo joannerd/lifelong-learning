@@ -1,0 +1,12 @@
+/Users/joannachen/Documents/aa-cd/c-sharp-notes/projects/list-tutorial/bin/Debug/netcoreapp3.1/list-tutorial.deps.json
+/Users/joannachen/Documents/aa-cd/c-sharp-notes/projects/list-tutorial/bin/Debug/netcoreapp3.1/list-tutorial.runtimeconfig.json
+/Users/joannachen/Documents/aa-cd/c-sharp-notes/projects/list-tutorial/bin/Debug/netcoreapp3.1/list-tutorial.runtimeconfig.dev.json
+/Users/joannachen/Documents/aa-cd/c-sharp-notes/projects/list-tutorial/bin/Debug/netcoreapp3.1/list-tutorial.dll
+/Users/joannachen/Documents/aa-cd/c-sharp-notes/projects/list-tutorial/bin/Debug/netcoreapp3.1/list-tutorial.pdb
+/Users/joannachen/Documents/aa-cd/c-sharp-notes/projects/list-tutorial/obj/Debug/netcoreapp3.1/list-tutorial.csprojAssemblyReference.cache
+/Users/joannachen/Documents/aa-cd/c-sharp-notes/projects/list-tutorial/obj/Debug/netcoreapp3.1/list-tutorial.AssemblyInfoInputs.cache
+/Users/joannachen/Documents/aa-cd/c-sharp-notes/projects/list-tutorial/obj/Debug/netcoreapp3.1/list-tutorial.AssemblyInfo.cs
+/Users/joannachen/Documents/aa-cd/c-sharp-notes/projects/list-tutorial/obj/Debug/netcoreapp3.1/list-tutorial.csproj.CoreCompileInputs.cache
+/Users/joannachen/Documents/aa-cd/c-sharp-notes/projects/list-tutorial/obj/Debug/netcoreapp3.1/list-tutorial.dll
+/Users/joannachen/Documents/aa-cd/c-sharp-notes/projects/list-tutorial/obj/Debug/netcoreapp3.1/list-tutorial.pdb
+/Users/joannachen/Documents/aa-cd/c-sharp-notes/projects/list-tutorial/obj/Debug/netcoreapp3.1/list-tutorial.genruntimeconfig.cache
