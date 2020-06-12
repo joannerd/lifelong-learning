@@ -18,6 +18,7 @@
     - `.StartsWith()`
     - `.EndsWith()`
     - `new StringBuilder()` + `.Append()`
+    - `WriteLine($"The average word length is: {wordLength.Average():F2}")` (`:` formats string)
 - Numbers:
   - int `1`
   - double `1.0`
