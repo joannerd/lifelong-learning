@@ -1,0 +1,12 @@
+/Users/joannachen/Documents/aa-cd/csharp-notes/09-console-application/bin/Debug/netcoreapp3.1/09-console-application.deps.json
+/Users/joannachen/Documents/aa-cd/csharp-notes/09-console-application/bin/Debug/netcoreapp3.1/09-console-application.runtimeconfig.json
+/Users/joannachen/Documents/aa-cd/csharp-notes/09-console-application/bin/Debug/netcoreapp3.1/09-console-application.runtimeconfig.dev.json
+/Users/joannachen/Documents/aa-cd/csharp-notes/09-console-application/bin/Debug/netcoreapp3.1/09-console-application.dll
+/Users/joannachen/Documents/aa-cd/csharp-notes/09-console-application/bin/Debug/netcoreapp3.1/09-console-application.pdb
+/Users/joannachen/Documents/aa-cd/csharp-notes/09-console-application/obj/Debug/netcoreapp3.1/09-console-application.csprojAssemblyReference.cache
+/Users/joannachen/Documents/aa-cd/csharp-notes/09-console-application/obj/Debug/netcoreapp3.1/09-console-application.AssemblyInfoInputs.cache
+/Users/joannachen/Documents/aa-cd/csharp-notes/09-console-application/obj/Debug/netcoreapp3.1/09-console-application.AssemblyInfo.cs
+/Users/joannachen/Documents/aa-cd/csharp-notes/09-console-application/obj/Debug/netcoreapp3.1/09-console-application.csproj.CoreCompileInputs.cache
+/Users/joannachen/Documents/aa-cd/csharp-notes/09-console-application/obj/Debug/netcoreapp3.1/09-console-application.dll
+/Users/joannachen/Documents/aa-cd/csharp-notes/09-console-application/obj/Debug/netcoreapp3.1/09-console-application.pdb
+/Users/joannachen/Documents/aa-cd/csharp-notes/09-console-application/obj/Debug/netcoreapp3.1/09-console-application.genruntimeconfig.cache
