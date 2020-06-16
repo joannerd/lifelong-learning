@@ -1,0 +1,14 @@
+/Users/joannachen/Documents/aa-cd/csharp-notes/10-rest-client/WebAPIClient/bin/Debug/netcoreapp3.1/WebAPIClient.deps.json
+/Users/joannachen/Documents/aa-cd/csharp-notes/10-rest-client/WebAPIClient/bin/Debug/netcoreapp3.1/WebAPIClient.runtimeconfig.json
+/Users/joannachen/Documents/aa-cd/csharp-notes/10-rest-client/WebAPIClient/bin/Debug/netcoreapp3.1/WebAPIClient.runtimeconfig.dev.json
+/Users/joannachen/Documents/aa-cd/csharp-notes/10-rest-client/WebAPIClient/bin/Debug/netcoreapp3.1/WebAPIClient.dll
+/Users/joannachen/Documents/aa-cd/csharp-notes/10-rest-client/WebAPIClient/bin/Debug/netcoreapp3.1/WebAPIClient.pdb
+/Users/joannachen/Documents/aa-cd/csharp-notes/10-rest-client/WebAPIClient/bin/Debug/netcoreapp3.1/System.Text.Json.dll
+/Users/joannachen/Documents/aa-cd/csharp-notes/10-rest-client/WebAPIClient/obj/Debug/netcoreapp3.1/WebAPIClient.csprojAssemblyReference.cache
+/Users/joannachen/Documents/aa-cd/csharp-notes/10-rest-client/WebAPIClient/obj/Debug/netcoreapp3.1/WebAPIClient.AssemblyInfoInputs.cache
+/Users/joannachen/Documents/aa-cd/csharp-notes/10-rest-client/WebAPIClient/obj/Debug/netcoreapp3.1/WebAPIClient.AssemblyInfo.cs
+/Users/joannachen/Documents/aa-cd/csharp-notes/10-rest-client/WebAPIClient/obj/Debug/netcoreapp3.1/WebAPIClient.csproj.CoreCompileInputs.cache
+/Users/joannachen/Documents/aa-cd/csharp-notes/10-rest-client/WebAPIClient/obj/Debug/netcoreapp3.1/WebAPIClient.csproj.CopyComplete
+/Users/joannachen/Documents/aa-cd/csharp-notes/10-rest-client/WebAPIClient/obj/Debug/netcoreapp3.1/WebAPIClient.dll
+/Users/joannachen/Documents/aa-cd/csharp-notes/10-rest-client/WebAPIClient/obj/Debug/netcoreapp3.1/WebAPIClient.pdb
+/Users/joannachen/Documents/aa-cd/csharp-notes/10-rest-client/WebAPIClient/obj/Debug/netcoreapp3.1/WebAPIClient.genruntimeconfig.cache

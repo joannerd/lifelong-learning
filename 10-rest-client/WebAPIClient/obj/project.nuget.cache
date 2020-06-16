@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "lHLRV6MhDTdN2tY+14V90pDa6JLJnrjUB+TBmiVBMXgS/3BBi8WGhwZGJZIzHbX/wE3tSJ8DftCGE+J81Vj88A==",
+  "success": true,
+  "projectFilePath": "/Users/joannachen/Documents/aa-cd/csharp-notes/10-rest-client/WebAPIClient/WebAPIClient.csproj",
+  "expectedPackageFiles": [
+    "/Users/joannachen/.nuget/packages/system.text.json/4.7.2/system.text.json.4.7.2.nupkg.sha512"
+  ],
+  "logs": []
+}
