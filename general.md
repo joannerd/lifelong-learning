@@ -170,6 +170,23 @@ string[] words = new string[]
 };              // 9 (or words.Length) ^0
 ```
 
+**[async/await]**
+
+```c#
+private static async Task ShowTeleprompter()
+{
+    var words = ReadFrom("sampleQuotes.txt");
+    foreach (var word in words)
+    {
+        Console.Write(word);
+        if (!string.IsNullOrWhiteSpace(word))
+        {
+            await Task.Delay(200);
+        }
+    }
+}
+```
+
 [Boxing / Unboxing]:
   https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/boxing-and-unboxing
 
@@ -226,4 +243,7 @@ string[] words = new string[]
 
 [Range]:
   https://docs.microsoft.com/en-us/dotnet/api/system.range
+
+[async/await]:
+  https://docs.microsoft.com/en-us/dotnet/csharp/async
 
