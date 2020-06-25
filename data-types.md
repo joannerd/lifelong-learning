@@ -24,6 +24,11 @@
   - double `1.0`
   - decimal `1.0M`
   - [Math.PI] `public const double PI = 3.1415926535897931;`
+  - `int.TryParse(<inpu>, out <outputVariable>)` (returns `false` when unable to parse)
+  - `int.Parse("1.0")`
+  - `double.Parse("1.0")`
+- Bool:
+  - `bool.Parse("False")`
 
 [Built-in Types]:
   https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types

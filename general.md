@@ -2,6 +2,18 @@
 
 ## Organization
 
+- [valid `Main` signatures]
+  ```c#
+  public static void Main() { }
+  public static int Main() { }
+  public static void Main(string[] args) { }
+  public static int Main(string[] args) { }
+  public static async Task Main() { }
+  public static async Task<int> Main() { }
+  public static async Task Main(string[] args) { }
+  public static async Task<int> Main(string[] args) { }
+  ```
+
 ## [Boxing / Unboxing]
 
 **Boxing**: convert a _value type_ to type `object` (implicit)
@@ -81,6 +93,8 @@ catch (ArgumentOutOfRangeException e)
     Console.WriteLine(e.ToString());
 }
 ```
+
+- [best practices for exceptions]
 
 **[try/catch-when]**
 
@@ -247,3 +261,8 @@ private static async Task ShowTeleprompter()
 [async/await]:
   https://docs.microsoft.com/en-us/dotnet/csharp/async
 
+[best practices for exceptions]:
+  https://docs.microsoft.com/en-us/dotnet/standard/exceptions/best-practices-for-exceptions
+
+[valid `Main` signatures]:
+  https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/main-and-command-args/
