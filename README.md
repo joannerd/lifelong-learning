@@ -5,6 +5,7 @@
 1. [LearnXInYMinutes]
 1. [Coding Conventions]
 1. [Microsoft C# Programming Guide]
+1. [Pluralsight]
 
 ## Terms/Patterns to Research More:
 
@@ -16,7 +17,7 @@
 - Leaning on the compiler
 - Testing:
   - AAA pattern (Arrange, Act, Assert)
-  - Mocking wtih [Moq] and [mediators]
+  - Mocking with [Moq] and [mediators]
 - Inline functions:
   - [Anonymous methods] in C# 2.0
   - [Lambdas] in C# 3.0
@@ -48,3 +49,4 @@
 
 [Local functions]: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/local-functions
 
+[Pluralsight]: https://app.pluralsight.com/course-player?clipId=893b69a0-e3a1-4807-a1fb-0d966614fcd1
