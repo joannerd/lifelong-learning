@@ -1,5 +1,6 @@
-# Elixir School Basics - 1. Basics
+# Elixir
 
+- [Elixir School](https://elixirschool.com/en/)
 - REPL: `iex`
 
 ## Strings
