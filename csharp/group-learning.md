@@ -1,8 +1,11 @@
+# Group Learning
 
-# 2020-08-06
+- **2020-08-06** - Topics: Classes, Objects, Reference Types, Value Types,
+  Throwing, Catching, Building Types
+- **2020-08-13** - Topics: Video Topics: interface, abstract class, design
+  patterns, interface segregation principle (SOL**I**D)
 
-Video Topics: Classes, Objects, Reference Types, Value Types, Throwing,
-Catching, Building Types
+-----
 
 ## 1. Working with Classes and Objects
 
@@ -314,7 +317,7 @@ handled in an external event handler.
 
 Steps to use events:
 1. Define a `delegate` that takes in an event sender (generic `object` type) and
-  event arguments (`EventArgs` type)
+   event arguments (`EventArgs` type)
     ```c#
     public delegate void GradeAddedDelegate(object sender, EventArgs args);
     ```
@@ -393,9 +396,313 @@ static void OnGradeAdded(object sender, EventArgs e)
     }
 ```
 
+-----
 
-[member]: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/members
-[Stack Overflow 1]: https://stackoverflow.com/a/1084255/124399
-[Stack Overflow 2]: https://stackoverflow.com/a/1083330/124399
-[field]: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/fields
-[Additional resource]: https://www.techopedia.com/definition/25589/class-members-c-sharp
+## 1. What is an interface and its purpose?
+
+An interface is a _contract_ ensuring the input/output typing of an entity's
+properties and methods. It can be used as a sort of _wrapper_ type. An entity's
+properties and methods are known as _signature lines_. An interface includes the
+_minimum_ signature lines of a model. A model using the interface can have
+additional signature lines, but must have the minimum signature lines listed in
+the interface. Each signature line defines an output type and input type.
+
+**Shortcut: generate interface with `cmd` + `.` + `Extract interface`**
+
+Parent classes inheritance must preface interface assignment.
+
+```c#
+public class PhysicalProductModel : PhysicalProductBase, IProductModel
+```
+
+Although a class can only inherit from one parent class, it can implement
+multiple interfaces because interfaces are simply _contracts_.
+
+```c#
+public class DigitalProductModel : IProductModel, IDigitalProductModel
+```
+
+Alternatively, an interface can build on top of another interface.
+
+```c#
+public interface IDigitalProductModel : IProductModel
+```
+
+The `DigitalProductModel` below will have all the signature lines of both the
+`IDigitalProductModel` and the `IProductModel`.
+
+```c#
+public class DigitalProductModel : IDigitalProductModelIDigitalProductModel
+```
+
+> **Side note**: the `digital` variable below is set to the `prod` object if
+> `prod is IDigitalProductModel`.
+
+```c#
+if (prod is IDigitalProductModel digital)
+{
+    Console.WriteLine($"For the { digital.Title } you have { digital.TotalDownloadsLeft } downloads left");
+}
+```
+
+## 2. What is an abstract class and what is it used for?
+
+Abstract classes are parent classes that _abstract_ methods for method
+inheritance/overriding, DRYer code, and reusable code. They are a blend of
+interfaces and a base parent class. You define an abstract class with the
+`abstract` keyword, like so:
+
+```c#
+public abstract class DataAccess
+{
+    public string LoadConnectionString(string name)
+    {
+        Console.WriteLine("Load Connection String");
+        return "testConnectionString";
+    }
+}
+```
+
+You cannot instantiate an abstract class. When inheriting an abstract class, the
+typings of the child classes are then _blended together_. Abstract class methods
+define the typings of a child class' methods with syntax similar to interfaces.
+For example, the `abstract` keyword is used and the example below defines the
+input/output typing of the `LoadData` and `SaveData` methods:
+
+```c#
+public abstract class DataAccess
+{
+    public string LoadConnectionString(string name)
+    {
+        Console.WriteLine("Load Connection String");
+        return "testConnectionString";
+    }
+
+    // Similar syntax to interface
+    public abstract void LoadData(string sql);
+    public abstract void SaveData(string sql);
+}
+```
+
+The `SqliteDataAccess` child class that inherits from the abstract `DataAccess`
+class would then need to use the `override` keyword to actually define the
+`LoadData` and `SaveData` methods.
+
+> **Note**: you can only `override` a method if the parent method is defined
+> with `virtual` or `abstract`. Defining a method as `virtual` means that you
+> don't have to override it, but you can.
+
+```c#
+public class SqliteDataAccess : DataAccess
+{
+    // Can override (virtual) DataAccess.LoadConnectionString
+    public override string LoadConnectionString(string name)
+    {
+        string output = base.LoadConnectionString(name);
+        output += " (from SQLite)";
+        return output;
+    }
+
+    // Needs to override (abstract) DataAccess.LoadData
+    public override void LoadData(string sql)
+    {
+        Console.WriteLine("Loading SQLite Data");
+    }
+
+    // Needs to override (abstract) DataAccess.SaveData
+    public override void SaveData(string sql)
+    {
+        Console.WriteLine("Saving data to SQLite");
+    }
+}
+```
+
+Just like an interface, an instance of the `SqliteDataAccess` class can be typed
+as `DataAccess`. The `db` instance below would inherit the
+`DataAccess.LoadConnectionString` method and reference its internal
+`SqliteDataAccess.LoadData` and `SqliteDataAccess.SaveData` methods.
+
+```c#
+DataAccess db = new SqliteDataAccess();
+```
+
+## 3. Find an example of an interface in Titan.
+
+An example of an interface in Titan is `IValidationError`.
+
+```c#
+namespace Titan.Core.Errors
+{
+    public interface IValidationError
+    {
+        string PropertyName { get; }
+
+        string Message { get; }
+
+        int? Status { get; set; }
+    }
+}
+```
+
+### How it works
+
+It's used to define the typings of the `ValidationError` class's properties
+(`PropertyName`, `Message`, and `Status`):
+
+```c#
+namespace Titan.Core.Errors
+{
+    public class ValidationError : IValidationError
+    {
+        public ValidationError(string propertyName, string message) : this(message)
+        {
+            PropertyName = propertyName;
+        }
+
+        public ValidationError(string message)
+        {
+            PropertyName = string.Empty;
+            Message = message;
+        }
+
+        public string PropertyName { get; }
+
+        public string Message { get; }
+
+        public int? Status { get; set; }
+    }
+}
+```
+
+### Why we used it in that specific scenario
+
+We used an interface to ensure that every `ValidationError` instance has a
+`PropertyName` of type string, a `Message` of type string, and a nullable
+`Status` of type integer. This way, we can also reference the interface to type
+collections of validation errors.
+
+```c#
+public IEnumerable<IValidationError>? Errors { get; private set; }
+```
+
+## 4. Find an example in Titan of where we might want to implement an interface.
+
+We might want to implement an `IPractice`. We could then use ISP to implement
+`ICode`, `IProject`, `IReading`, and `IVideo` interfaces that build on top of
+the an `IPractice` interface.
+
+### Why would an interface be beneficial in that scenario?
+
+It could be beneficial to implement an interface in that scenario because the
+`Code`, `Project`, `Reading`, and `Video` classes all have shared and unique
+fields. The `IPractice` interface could keep all the generic `Practice` fields
+separate from the unique `Code`, `Project`, `Reading`, and `Video` fields. We're
+currently using inheritance instead of setting specific interfaces that specify
+the typings for each child class.
+
+## 5. What's the Interface Segregation Principle (ISP)?
+
+The Interface Segregation Principle is the practice of not having one general
+monolothic interface, and having modular interfaces that are combined instead.
+
+For example, a `Book` class can implement an `IBorrowableBook` interface, which
+is actually a combination of the `IBorrowable` and `IBook` interfaces (with the
+`IBook` interface building on the `ILibraryItem` interface):
+
+```
+IBorrowableBook
+  ├── IBorrowable
+  └── IBook
+        └── ILibraryItem
+```
+
+**`Book` class**
+
+```c#
+public class Book : IBorrowableBook
+{
+    public string LibraryId { get; set; }
+    public string Title { get; set; }
+    public string Author { get; set; }
+    public int Pages { get; set; }
+    public int CheckOutDurationInDays { get; set; } = 14;
+    public string Borrower { get; set; }
+    public DateTime BorrowDate { get; set; }
+
+    public void CheckOut(string borrower)
+    {
+        Borrower = borrower;
+        BorrowDate = DateTime.Now;
+    }
+
+    public void CheckIn()
+    {
+        Borrower = "";
+    }
+
+    public DateTime GetDueDate()
+    {
+        return BorrowDate.AddDays(CheckOutDurationInDays);
+    }
+}
+```
+
+**`IBorrowableBook` interface**
+
+```c#
+public interface IBorrowableBook : IBorrowable, IBook
+{
+}
+```
+
+**`IBorrowable` interface**
+
+```c#
+public interface IBorrowable
+{
+    DateTime BorrowDate { get; set; }
+    string Borrower { get; set; }
+    int CheckOutDurationInDays { get; set; }
+
+    void CheckIn();
+    void CheckOut(string borrower);
+    DateTime GetDueDate();
+}
+```
+
+**`IBook` interface**
+
+```c#
+public interface IBook : ILibraryItem
+{
+    string Author { get; set; }
+    int Pages { get; set; }
+}
+```
+
+**`ILibraryItem` interface**
+
+```c#
+public interface ILibraryItem
+{
+    string LibraryId { get; set; }
+    string Title { get; set; }
+}
+```
+
+### Is there an example of that principle in practice in Titan?
+
+I don't think so. The two most closely tied interfaces are
+`IGroupDayAssignments` and `IGroupCalendarDayAssignments`. I think they are an
+implementation of interfaces that are similar and segregated, but aren't an
+example of ISP because they don't follow the pattern of combining with other
+interfaces in a modular way.
+
+
+[member]:
+https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/members
+[Stack Overflow 1]: https://stackoverflow.com/a/1084255/124399 [Stack Overflow
+2]: https://stackoverflow.com/a/1083330/124399 [field]:
+https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/fields
+[Additional resource]:
+https://www.techopedia.com/definition/25589/class-members-c-sharp

@@ -1,4 +1,4 @@
-# Resources
+# C\#
 
 1. [Introduction to programming with C# Tutorials]
 1. [C# 6 Tutorial]
